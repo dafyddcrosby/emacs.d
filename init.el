@@ -3,10 +3,20 @@
 (unless (server-running-p)
   (server-start))
 
-(load-file (concat user-emacs-directory "init/ui.el"))
-(load-file (concat user-emacs-directory "init/ruby.el"))
-(load-file (concat user-emacs-directory "init/text.el"))
-(load-file (concat user-emacs-directory "init/mail.el"))
+(require 'package)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+; TODO use use-package-expand-minimally when I'm happy with my config
+
+(load-file (locate-user-emacs-file "init/ui.el"))
+(load-file (locate-user-emacs-file "init/ruby.el"))
+(load-file (locate-user-emacs-file "init/text.el"))
+(load-file (locate-user-emacs-file "init/mail.el"))
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (when (file-exists-p custom-file)
@@ -16,26 +26,22 @@
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
 
 ;; Abbrev
-(load-file (concat user-emacs-directory "init/abbrev.el"))
+(load-file (locate-user-emacs-file "init/abbrev.el"))
 ;; Calendar
-(load-file (concat user-emacs-directory "init/calendar.el"))
+(load-file (locate-user-emacs-file "init/calendar.el"))
 ;; Org-mode (builtin)
-(load-file (concat user-emacs-directory "init/org.el"))
+(load-file (locate-user-emacs-file "init/org.el"))
 
-(require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")))
-(package-initialize)
 
 ;; use evil for vim hawtness
-(load-file (concat user-emacs-directory "init/evil.el"))
+(load-file (locate-user-emacs-file "init/evil.el"))
 ;; SLIME
-(load-file (concat user-emacs-directory "init/slime.el"))
+(load-file (locate-user-emacs-file "init/slime.el"))
 
-(when (file-exists-p (concat user-emacs-directory "work/work.el"))
-  (add-to-list 'load-path (concat user-emacs-directory "work"))
+(when (file-exists-p (locate-user-emacs-file "work/work.el"))
+  (add-to-list 'load-path (locate-user-emacs-file "work"))
   (require 'work))
 
 ; Have a place to put config that I'm not ready to commit to yet
-(when (file-exists-p (concat user-emacs-directory "init/wip.el"))
-  (load-file (concat user-emacs-directory "init/wip.el")))
+(when (file-exists-p (locate-user-emacs-file "init/wip.el"))
+  (load-file (locate-user-emacs-file "init/wip.el")))

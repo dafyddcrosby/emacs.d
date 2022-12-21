@@ -1,9 +1,11 @@
-; Fix TAB in emacs
-(setq evil-want-C-i-jump nil)
-(setq evil-undo-system 'undo-redo) ; Emacs 28+
-
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-C-i-jump nil ; Fix TAB in emacs
+        evil-undo-system 'undo-redo) ; Emacs 28+
+  :config
+  (evil-mode 1)
+  )
 
 (evil-define-key 'normal org-mode-map (kbd "<tab>") #'org-cycle)
 (evil-define-key 'normal org-mode-map (kbd "RET") #'org-open-at-point)

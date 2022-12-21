@@ -5,16 +5,15 @@
 (horizontal-scroll-bar-mode 0)
 
 ; unique buffer names
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+(use-package uniquify
+  :ensure nil
+  :config
+  (setq uniquify-buffer-name-style 'forward))
 
-(setq font-lock-maximum-decoration t)
-
-(setq apropos-do-all t)
-
-(setq use-short-answers t)
-
-(setq visible-bell t)
+(setq font-lock-maximum-decoration t
+      apropos-do-all t
+      use-short-answers t
+      visible-bell t)
 
 (load-theme 'tango-dark)
 

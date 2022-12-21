@@ -1,6 +1,9 @@
 ;; Configure SLIME
 ;; https://github.com/slime/slime
-(setq inferior-lisp-program "sbcl")
+(use-package slime
+  :ensure t
+  :config
+  (setq inferior-lisp-program "sbcl"))
 ; (eval-after-load "slime"
 ;   '(progn
 ;      (setq common-lisp-hyperspec-root
