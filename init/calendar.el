@@ -1,5 +1,4 @@
 (use-package calendar
-  :ensure nil
   :custom
   (calendar-latitude 51.0453)
   (calendar-longitude -114.058)
