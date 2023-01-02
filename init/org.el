@@ -45,3 +45,28 @@
   :hook
   (org-after-todo-statistics . org-summary-todo)
   )
+
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory org-directory "Use the same org directory")
+  :config
+  (org-roam-setup)
+  (org-roam-db-autosync-mode)
+  :bind (("C-c n f" . org-roam-node-find)
+         ("C-c n r" . org-roam-node-random)
+         ("C-c n c" . org-roam-capture)
+         ("C-c n g" . org-roam-graph)
+         :map org-mode-map
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n o" . org-id-get-create)
+         ("C-c n t" . org-roam-tag-add)
+         ("C-c n a" . org-roam-alias-add)
+         ("C-c n l" . org-roam-buffer-toggle)
+         )
+  )
+
+(use-package org-roam-ui
+  :ensure t)
+
+(use-package ox-md)
