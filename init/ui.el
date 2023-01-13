@@ -34,6 +34,14 @@
   ("M-o" . other-window)
   )
 
+(use-package tab-bar
+  :bind
+  ("C-<next>" . tab-next)
+  ("C-<prior>" . tab-previous)
+  :config
+  (tab-bar-mode 1)
+  )
+
 (use-package apropos
   :custom
   (apropos-do-all t)
