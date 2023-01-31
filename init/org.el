@@ -24,8 +24,10 @@
   (org-link-abbrev-alist
    '(
      ("duckduckgo" . "https://duckduckgo.com/?q=%s")
-     ("wp"         . "https://en.wikipedia.org/wiki/%s")
+     ("ghrepo"     . "https://github.com/%s")
      ("omap"       . "https://nominatim.openstreetmap.org/ui/search.html?q=%s&polygon=1")
+     ("wp"         . "https://en.wikipedia.org/wiki/%s")
+     ("yt"         . "https://www.youtube.com/watch?v=%s")
      ))
 
   (org-todo-keywords
