@@ -25,9 +25,16 @@
   ; https://orgmode.org/manual/Link-Abbreviations.html
   (org-link-abbrev-alist
    '(
+     ("chefresource" . "https://docs.chef.io/resources/%s/")
+     ("cookstyle"  . "https://docs.chef.io/workstation/cookstyle/%s/")
      ("duckduckgo" . "https://duckduckgo.com/?q=%s")
      ("ghrepo"     . "https://github.com/%s")
+     ("inspecresource" . "https://docs.chef.io/inspec/resources/%s/")
      ("omap"       . "https://nominatim.openstreetmap.org/ui/search.html?q=%s&polygon=1")
+     ("pypi"       . "https://pypi.org/project/%s")
+     ("rubydoc"    . "https://docs.ruby-lang.org/en/master/%s.html")
+     ("rubygems"   . "https://rubygems.org/gems/%s")
+     ("supermarket" . "https://supermarket.chef.io/cookbooks/%s")
      ("wp"         . "https://en.wikipedia.org/wiki/%s")
      ("yt"         . "https://www.youtube.com/watch?v=%s")
      ))
