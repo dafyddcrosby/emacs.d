@@ -14,8 +14,6 @@
   (org-habit-scheduled-past-days 10000 "Continue seeing undone habits")
   (org-habit-show-habits-only-for-today nil "I like to see upcoming habits")
   (org-hierarchical-todo-statistics nil "Consider all tree entries")
-  (org-icalendar-include-todo t "Add unfinished VTODO to icalendar exports")
-  (org-icalendar-store-UID t "To prevent duplicate TODOs, adds ID properties to each node")
   (org-log-into-drawer t)
   (org-refile-use-outline-path 'file "Use file name to determine refile path")
   (org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
