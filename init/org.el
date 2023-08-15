@@ -39,9 +39,8 @@
 
   (org-todo-keywords
    '(
-     (sequence "TODO(t)" "WIP(w)" "VERIFY(v)" "|" "DONE(d)")
-     (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-     (sequence "|" "CANCELLED(c)")
+     (sequence "ANALYZE(a)" "TODO(t)" "WIP(w)" "VERIFY(v)" "|" "DONE(d)")
+     (sequence "|" "CANCELLED(x)")
      ))
   :bind
   (
