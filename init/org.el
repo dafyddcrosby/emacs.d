@@ -76,7 +76,4 @@
          )
   )
 
-(use-package org-roam-ui
-  :ensure t)
-
 (use-package ox-md)
