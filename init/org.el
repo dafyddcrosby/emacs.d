@@ -56,6 +56,9 @@
   (org-after-todo-statistics . org-summary-todo)
   )
 
+(global-set-key [f5] 'org-capture)
+(global-set-key [f6] 'org-agenda)
+
 (use-package org-roam
   :ensure t
   :custom
