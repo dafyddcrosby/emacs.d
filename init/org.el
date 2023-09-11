@@ -61,6 +61,7 @@
 
 (use-package org-roam
   :ensure t
+  :after org
   :custom
   (org-roam-directory org-directory "Use the same org directory")
   :config
