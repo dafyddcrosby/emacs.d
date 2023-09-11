@@ -68,3 +68,13 @@
          ("C-M-s" . isearch-forward)
          ("C-M-r" . isearch-backward)
          ))
+
+(setq
+ ido-enable-flex-matching t
+ ido-everywhere t
+ )
+(ido-mode 1)
+
+; Window configuration history
+; C-c LEFT or RIGHT
+(winner-mode 1)
