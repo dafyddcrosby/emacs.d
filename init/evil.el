@@ -3,6 +3,7 @@
   :custom
   (evil-want-C-i-jump nil "Fix TAB in emacs")
   (evil-undo-system 'undo-redo "Note: requires Emacs 28+")
+  (evil-respect-visual-line-mode 't "Note: evil must load after visual-line-mode")
   :config
   (evil-mode 1)
   (evil-define-key 'normal org-mode-map (kbd "<tab>") #'org-cycle)
@@ -12,6 +13,8 @@
   (evil-define-key 'motion Info-mode-map (kbd "[") #'Info-backward-node)
   (evil-define-key 'motion Info-mode-map (kbd "]") #'Info-forward-node)
 
+  (evil-global-set-key 'motion (kbd "<down>") #'evil-next-visual-line)
+  (evil-global-set-key 'motion (kbd "<up>") #'evil-previous-visual-line)
   (evil-define-key nil 'global (kbd "C-S-v") #'yank)
   (evil-ex-define-cmd "q" #'kill-this-buffer)
   )
