@@ -35,9 +35,6 @@
   ("M-o" . other-window)
   )
 
-; switch windows with S-<arrow>
-(windmove-default-keybindings)
-
 (use-package tab-bar
   :bind
   ("C-<next>" . tab-next)
