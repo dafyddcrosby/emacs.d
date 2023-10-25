@@ -3,6 +3,7 @@
       ring-bell-function 'ignore
       visible-bell t)
 
+(desktop-save-mode 1)
 (global-visual-line-mode 1)
 (use-package menu-bar
   :config
