@@ -20,7 +20,6 @@
   (org-refile-use-outline-path 'file "Use file name to determine refile path")
   (org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
   (org-return-follows-link t)
-  (org-todo-keyword-faces '(("WAITING" :foreground "orange" :weight bold)))
 
   ; https://orgmode.org/manual/Link-Abbreviations.html
   (org-link-abbrev-alist
