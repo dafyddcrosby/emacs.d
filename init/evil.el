@@ -18,3 +18,15 @@
   (evil-define-key nil 'global (kbd "C-S-v") #'yank)
   (evil-ex-define-cmd "q" #'kill-this-buffer)
   )
+
+; some modes don't make sense with evil
+(loop for (mode . state)
+      in '(
+           (inferior-emacs-lisp-mode . emacs)
+           (git-commit-mode . insert)
+           (term-mode . emacs)
+           (help-mode . emacs)
+           (dired-mode . emacs)
+           (newsticker-treeview-mode . emacs)
+           )
+      do (evil-set-initial-state mode state))
