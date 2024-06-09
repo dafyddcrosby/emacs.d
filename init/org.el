@@ -1,14 +1,19 @@
 (use-package org
   :custom
-  (org-agenda-dim-blocked-tasks 'invisible)
+  (org-agenda-dim-blocked-tasks 't)
+  (org-agenda-include-diary t)
   (org-agenda-show-all-dates t "show empty dates")
+  (org-agenda-skip-deadline-if-done t)
+  (org-agenda-skip-scheduled-if-deadline-is-shown t)
+  (org-agenda-skip-scheduled-if-done t)
+  (org-agenda-sticky t)
   (org-agenda-todo-ignore-scheduled 'future "ignore SCHEDULED until day arrives")
   (org-agenda-use-tag-inheritance nil "Speed up agenda")
-  (org-agenda-include-diary t)
   (org-babel-default-header-args '((:eval . "no")))
   (org-clock-out-remove-zero-time-clocks t "Don't save 0-minute clocks")
   (org-clock-persist t "Save running clocks between Emacs sessions")
   (org-clock-persist-query-resume nil "Ask before resuming clock")
+  (org-deadline-warning-days 60)
   (org-ellipsis "⤵")
   (org-enforce-todo-dependencies t)
   (org-export-use-babel nil)
@@ -17,8 +22,8 @@
   (org-habit-show-habits-only-for-today nil "I like to see upcoming habits")
   (org-hierarchical-todo-statistics nil "Consider all tree entries")
   (org-log-into-drawer t)
-  (org-refile-use-outline-path 'file "Use file name to determine refile path")
   (org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
+  (org-refile-use-outline-path 'file "Use file name to determine refile path")
   (org-return-follows-link t)
 
   ; https://orgmode.org/manual/Link-Abbreviations.html
