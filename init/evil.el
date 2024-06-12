@@ -20,12 +20,13 @@
   )
 
 ; some modes don't make sense with evil
-(loop for (mode . state)
+(cl-loop for (mode . state)
       in '(
            (inferior-emacs-lisp-mode . emacs)
            (git-commit-mode . insert)
            (term-mode . emacs)
            (help-mode . emacs)
+           (Info-mode . emacs)
            (dired-mode . emacs)
            (newsticker-treeview-mode . emacs)
            )
