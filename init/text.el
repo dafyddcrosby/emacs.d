@@ -46,3 +46,5 @@
 
 (use-package markdown-mode
   :ensure t)
+
+(setq sentence-end-double-space nil)
