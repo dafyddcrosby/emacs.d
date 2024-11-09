@@ -62,6 +62,7 @@
 (global-set-key [f5] 'org-capture)
 (global-set-key [f6] 'org-agenda)
 
+(setq org-roam-directory org-directory)
 (use-package org-roam
   :ensure t
   :after org
