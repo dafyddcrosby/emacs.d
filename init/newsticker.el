@@ -18,4 +18,4 @@
   (newsticker-download-logos nil)
   (newsticker-obsolete-item-max-age dc-monthly))
 
-(dc-maybe-load-init "init/newsticker-private.el")
+(dc-maybe-load-init "init/private/newsticker-private.el")

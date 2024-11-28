@@ -20,7 +20,7 @@
   (custom-file (locate-user-emacs-file "custom.el"))
   )
 
-(dc-maybe-load-init "init/private-begin.el")
+(dc-maybe-load-init "init/private/private-begin.el")
 
 (mapc 'dc-load-init
         '(
@@ -39,7 +39,7 @@
 (mapc 'dc-maybe-load-init
       '(
         "custom.el"
-        "init/work.el"
-        "init/wip.el"
-        "init/private-end.el"
+        "init/private/work.el"
+        "init/private/wip.el"
+        "init/private/private-end.el"
         ))
