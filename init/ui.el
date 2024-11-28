@@ -78,6 +78,9 @@
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 
+(global-set-key (kbd "C-x \"") 'split-window-below)
+(global-set-key (kbd "C-x |") 'split-window-right)
+
 ; Window configuration history
 ; C-c LEFT or RIGHT
 (winner-mode 1)
