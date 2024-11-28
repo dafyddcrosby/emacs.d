@@ -3,26 +3,6 @@
 (unless (server-running-p)
   (server-start))
 
-(require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")))
-(package-initialize)
-
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-; TODO use use-package-expand-minimally when I'm happy with my config
-
-(setq use-package-ensure-function 'quelpa)
-
-(use-package quelpa
-  :ensure t)
-
-(quelpa '(quelpa-use-package
-          :fetcher github
-          :repo "quelpa/quelpa-use-package"))
-(require 'quelpa-use-package)
-
 (defun dc-load-init (x)
   "Load a file from user emacs directory"
   (load-file (locate-user-emacs-file x)))
@@ -32,6 +12,8 @@
   (let ((f (locate-user-emacs-file x)))
     (if (file-exists-p f)
         (load-file f))))
+
+(mapc 'dc-load-init '("init/package.el"))
 
 (use-package cus-edit
   :custom
