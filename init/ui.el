@@ -73,6 +73,12 @@
  )
 (ido-mode 1)
 
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+
 ; Window configuration history
 ; C-c LEFT or RIGHT
 (winner-mode 1)
+
