@@ -33,6 +33,7 @@
           "init/org.el"
           "init/evil.el"
           "init/newsticker.el"
+          "init/vc.el"
           "init/slime.el"
           ))
 
