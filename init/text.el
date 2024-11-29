@@ -38,9 +38,6 @@
 ; TODO use-package
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
 
-(use-package literate-calc-mode
-  :ensure t)
-
 (use-package yaml-mode
   :ensure t)
 
