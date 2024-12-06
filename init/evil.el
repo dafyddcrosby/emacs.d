@@ -24,6 +24,7 @@
       in '(
            (Info-mode . emacs)
            (Org-Agenda-mode . emacs)
+           (flymake-diagnostics-buffer-mode . emacs)
            (dired-mode . emacs)
            (git-commit-mode . insert)
            (help-mode . emacs)
