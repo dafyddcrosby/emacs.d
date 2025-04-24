@@ -1,3 +1,7 @@
+;; I'm not normally a fan of papering over bad behaviour by increasing
+;; resources, but the 800KB default is way too small for what I do with Emacs
+(setq gc-cons-threshold (* 1024 1024 128)) ; 128 MB
+
 ;; always start up a server
 (require 'server)
 (unless (server-running-p)
