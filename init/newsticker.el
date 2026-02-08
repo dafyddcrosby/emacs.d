@@ -17,6 +17,8 @@
   (concat "https://feeds.feedburner.com/" site ))
 (defun dc-simplecast-url (site)
   (concat "https://feeds.simplecast.com/" site ))
+(defun dc-megaphone-url (site)
+  (concat "https://feeds.megaphone.fm/" site ))
 
 (use-package newsticker
   :custom
