@@ -9,6 +9,14 @@
   (concat "https://" site ".blogspot.com/feeds/posts/default"))
 (defun dc-libsyn-url (site)
   (concat "https://" site ".libsyn.com/rss"))
+(defun dc-tumblr-url (site)
+  (concat "https://" site ".tumblr.com/rss"))
+(defun dc-wordpresscom-url (site)
+  (concat "https://" site ".wordpress.com/feed/"))
+(defun dc-feedburner-url (site)
+  (concat "https://feeds.feedburner.com/" site ))
+(defun dc-simplecast-url (site)
+  (concat "https://feeds.simplecast.com/" site ))
 
 (use-package newsticker
   :custom
